@@ -1,8 +1,9 @@
 {
-  "name": "node-fetch",
+  "name": "@kakku/node-fetch",
   "version": "2.3.0",
   "description": "A light-weight module that brings window.fetch to node.js",
   "main": "lib/index",
+  "types": "./lib/index.d.ts",
   "browser": "./browser.js",
   "module": "lib/index.mjs",
   "files": [
@@ -23,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitinn/node-fetch.git"
+    "url": "https://github.com/abruzzihraig/node-fetch.git"
   },
   "keywords": [
     "fetch",
@@ -33,9 +34,9 @@
   "author": "David Frank",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitinn/node-fetch/issues"
+    "url": "https://github.com/abruzzihraig/node-fetch/issues"
   },
-  "homepage": "https://github.com/bitinn/node-fetch",
+  "homepage": "https://github.com/abruzzihraig/node-fetch",
   "devDependencies": {
     "abort-controller": "^1.0.2",
     "abortcontroller-polyfill": "^1.1.9",
