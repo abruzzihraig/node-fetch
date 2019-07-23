@@ -228,6 +228,11 @@ export function getNodeRequestOptions(request) {
 	// HTTP-network-or-cache fetch step 2.15
 	if (request.compress && !headers.has('Accept-Encoding')) {
 		headers.set('Accept-Encoding', 'gzip,deflate');
+  }
+
+	let agent = request.agent;
+	if (typeof agent === 'function') {
+		agent = agent(parsedURL);
 	}
 
 	if (!headers.has('Connection') && !request.agent) {
@@ -237,9 +242,9 @@ export function getNodeRequestOptions(request) {
 	// HTTP-network fetch step 4.2
 	// chunked encoding is handled by Node.js
 
-	return Object.assign({}, parsedURL, {
+  return Object.assign({}, parsedURL, {
 		method: request.method,
 		headers: exportNodeCompatibleHeaders(headers),
-		agent: request.agent
+		agent
 	});
 }
