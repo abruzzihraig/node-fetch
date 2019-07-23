@@ -1,6 +1,6 @@
 {
   "name": "@kakku/node-fetch",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "A light-weight module that brings window.fetch to node.js",
   "main": "lib/index",
   "types": "lib/index.d.ts",
